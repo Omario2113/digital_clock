@@ -1,0 +1,23 @@
+/*Google font*/
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body {
+    background-color: black;
+}
+
+.clockTypeButton {
+    padding: 20px 30px;
+    border: 5px solid #23dfb8;
+    color: #23dfb8;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+#clockDisplay {
+    font-family: 'Orbitron', sans-serif;
+    color: #2edfb8;
+    font-size: 100px;
+    text-align: center;
+    letter-spacing: 7px;
+    padding: 40px 0px;
+}
