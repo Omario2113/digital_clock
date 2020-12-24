@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UnBroken Clocks"</title>
+        <title>UnBroken Clocks</title>
         <link rel="stylesheet" href="assets\clockstyle.css">
-        <script src="assets\currentTime.js"></script>
     </head>
     
-    <body onload="showTime();">
-
+    <body onload="resetTime()">
         <header>
             <nav class="headnav">
                 <a class="clockType" href="clock.html">Digital Clock</a>
@@ -19,8 +18,16 @@
             </nav>
         </header>
 
-        <div id="clockDisplay"></div>
-
+        <div id="stopwatchDisplay"></div>
+        <div id="stopwatchButtons">
+            <button id="startbtn" onclick="startTime()">Start</button>
+            <button id="stopbtn" onclick="stopTime()">Stop</button>
+            <button id="resetbtn" onclick="resetTime()">Reset</button>
+            <button id="lapbtn" onclick="lapTime()">Lap</button>
+        </div>
+        <div id="lapTimes"></div>
     </body>
+
+    <script src="assets\stopwatch.js"></script>
 
 </html>

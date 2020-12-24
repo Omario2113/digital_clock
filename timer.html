@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UnBroken Clocks"</title>
         <link rel="stylesheet" href="assets\clockstyle.css">
-        <script src="assets\currentTime.js"></script>
+        <script src="assets\timer.js"></script>
     </head>
     
-    <body onload="showTime();">
+    <body onload="timer();">
 
         <header>
             <nav class="headnav">
@@ -19,8 +19,9 @@
             </nav>
         </header>
 
-        <div id="clockDisplay"></div>
-
+        <div id="timerDisplay"></div>
+        <button class="startStop" onclick="timer()" type="button">Start / Stop</button>
+    
     </body>
 
 </html>

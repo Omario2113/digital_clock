@@ -5,6 +5,9 @@ function showTime() {
     var s = date.getSeconds();
     var session = "AM";
 
+    if(h == 12) { session = "PM"; }
+    if(h == 0) { session = "AM"; }
+    
     if(h > 12) {
         h = h - 12;
         session = "PM";

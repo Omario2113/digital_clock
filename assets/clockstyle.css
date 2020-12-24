@@ -1,23 +1,104 @@
-/*Google font*/
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 
+*{box-sizing: border-box; margin: 0px;}
+
 body {
+    grid-template-areas: "head"
+                         "clck"
+                         "foot";
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 400px 40px;
     background-color: black;
-}
-
-.clockTypeButton {
-    padding: 20px 30px;
-    border: 5px solid #23dfb8;
-    color: #23dfb8;
-    border-radius: 10px;
-    text-decoration: none;
-}
-
-#clockDisplay {
     font-family: 'Orbitron', sans-serif;
+}
+
+/*
+=================================================================
+        HEADER NAV STYLING
+=================================================================
+*/
+
+header {
+    grid-area: head;
+}
+
+.headnav {
+    display: flex;
+    background-color: #23dfb8;
+}
+
+.clockType {
+    font-size: 20px;
+    padding: 20px 30px;
+    width: fit-content;
+    color: black;
+    border-right: 3px solid black;
+    text-decoration: none;
+    text-align: center;
+}
+
+.clockType:hover {
+    background-color: grey;
+    color: ivory;
+}
+
+/*
+=================================================================
+        TIME DISPLAY STYLING
+=================================================================
+*/
+
+#clockDisplay, #stopwatchDisplay {
+    grid-area: clck;
     color: #2edfb8;
-    font-size: 100px;
+    font-size: 70px;
     text-align: center;
     letter-spacing: 7px;
     padding: 40px 0px;
+}
+
+/*
+=================================================================
+        STOPWATCH STYLING
+=================================================================
+*/
+
+#stopwatchButtons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#stopwatchButtons button {
+    margin: 10px 20px;
+    width: 20%;
+    height: 50px;
+}
+
+#stop, #lap {
+    display: none;
+}
+
+#lapTimes {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#lapTimes > p {
+    width: fit-content;
+    margin: 10px;
+    border-bottom: 2px solid #23dfb8;
+}
+
+/*
+=================================================================
+        TIME DISPLAY MEDIA QUERY
+=================================================================
+*/
+
+@media screen and (max-width: 800px) {
+    #clockDisplay, #stopwatchDisplay {
+        font-size: 50px;
+    }
 }
