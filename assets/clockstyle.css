@@ -48,7 +48,7 @@ header {
 =================================================================
 */
 
-#clockDisplay, #stopwatchDisplay {
+#timeDisplay, #enterTimeDisplay {
     grid-area: clck;
     color: #2edfb8;
     font-size: 70px;
@@ -63,19 +63,19 @@ header {
 =================================================================
 */
 
-#stopwatchButtons {
+#fxnButtons {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-#stopwatchButtons button {
+#fxnButtons button {
     margin: 10px 20px;
     width: 20%;
     height: 50px;
 }
 
-#stop, #lap {
+#stopbtn, #lapbtn {
     display: none;
 }
 
@@ -93,12 +93,33 @@ header {
 
 /*
 =================================================================
-        TIME DISPLAY MEDIA QUERY
+        TIMER STYLING
+=================================================================
+*/
+
+#enterTimeDisplay {
+    display: flex;
+    justify-content: center;
+}
+
+#enterTimeDisplay > input {
+    width: 15%;
+    height: 70px;
+    padding: 20px;
+}
+
+#enterTimeDisplay > p {
+    width: fit-content;
+    padding: 0px 10px 0px 5px;
+}
+/*
+=================================================================
+        DISPLAY MEDIA QUERY
 =================================================================
 */
 
 @media screen and (max-width: 800px) {
-    #clockDisplay, #stopwatchDisplay {
+    #timeDisplay, #enterTimeDisplay {
         font-size: 50px;
     }
 }

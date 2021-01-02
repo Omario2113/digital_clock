@@ -18,7 +18,7 @@ function showTime() {
     s = (s < 10) ? "0" + s : s;
 
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("clockDisplay").innerHTML = time;
+    document.getElementById("timeDisplay").innerHTML = time;
 }
 
 var face = setInterval(showTime, 1000);

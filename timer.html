@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>UnBroken Clocks"</title>
+        <title>UnBroken Clocks</title>
         <link rel="stylesheet" href="assets\clockstyle.css">
-        <script src="assets\timer.js"></script>
     </head>
     
-    <body onload="timer();">
-
+    <body>
         <header>
             <nav class="headnav">
                 <a class="clockType" href="clock.html">Digital Clock</a>
                 <a class="clockType" href="stopwatch.html">Stop Watch</a>
                 <a class="clockType" href="analog.html">Analog Clock</a>
-                <a class="clockType" href="countdown.html">Timer</a>
+                <a class="clockType" href="timer.html">Timer</a>
             </nav>
         </header>
 
-        <div id="timerDisplay"></div>
-        <button class="startStop" onclick="timer()" type="button">Start / Stop</button>
-    
+        <div id="enterTimeDisplay">
+            <input type="text" id="hrs" placeholder="0"><p>hr</p>
+            <input type="text" id="mins" placeholder="0"><p>min</p>
+            <input type="text" id="secs" placeholder="0"><p>sec</p>
+        </div>
+
+        <div id="timeDisplay" style="display: none;"></div>
+        <div id="fxnButtons">
+            <button id="enterbtn" onclick="enterTime()">Set Time</button>
+            <button id="startbtn" style="display: none;" onclick="startTime()">Start</button>
+            <button id="stopbtn" onclick="stopTime()">Stop</button>
+            <button id="resetbtn" style="display: none;" onclick="resetTime()">Reset</button>
+        </div>
     </body>
+
+    <script src="assets\timer.js"></script>
 
 </html>
