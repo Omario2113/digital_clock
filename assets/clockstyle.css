@@ -104,7 +104,7 @@ header {
 
 #enterTimeDisplay > input {
     width: 15%;
-    height: 70px;
+    height: 60px;
     padding: 20px;
 }
 
@@ -112,6 +112,7 @@ header {
     width: fit-content;
     padding: 0px 10px 0px 5px;
 }
+
 /*
 =================================================================
         DISPLAY MEDIA QUERY
@@ -120,6 +121,6 @@ header {
 
 @media screen and (max-width: 800px) {
     #timeDisplay, #enterTimeDisplay {
-        font-size: 50px;
+        font-size: 45px;
     }
 }
