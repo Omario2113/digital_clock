@@ -5,10 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UnBroken Clocks</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="assets\clockstyle.css">
     </head>
     
-    <body onload="resetTime()">
+    <body>
         <header>
             <nav class="headnav">
                 <a class="clockType" href="clock.html">Digital Clock</a>
@@ -20,10 +21,10 @@
 
         <div id="timeDisplay"></div>
         <div id="fxnButtons">
-            <button id="startbtn" onclick="startTime()">Start</button>
-            <button id="stopbtn" onclick="stopTime()">Stop</button>
-            <button id="resetbtn" onclick="resetTime()">Reset</button>
-            <button id="lapbtn" onclick="lapTime()">Lap</button>
+            <button id="startbtn">Start</button>
+            <button id="stopbtn">Stop</button>
+            <button id="resetbtn">Reset</button>
+            <button id="lapbtn">Lap</button>
         </div>
         <div id="lapTimes"></div>
     </body>

@@ -13,8 +13,8 @@ $(document).ready(function(){
     function subTime() {
         //decriments the timer
         s -= 1;
-        if (s < 1 && m > 0) { s = 59; m -= 1; }
-        else if (s < 1 && m == 0 && h > 0) { s = 59; m = 59; h -=1; }
+        if (s < 0 && m > 0) { s = 59; m -= 1; }
+        else if (s < 0 && m == 0 && h > 0) { s = 59; m = 59; h -=1; }
         if (m < 0 && h > 0) { m = 59; h -= 1; }
         displayTime();
 
@@ -31,10 +31,9 @@ $(document).ready(function(){
         var numRegex = /\d/.test(h);  //adding regex to test for invalid inputs
     
         //gets value from user inputs
-        h = document.getElementById("hrs").value;
-        m = document.getElementById("mins").value;
-        s = document.getElementById("secs").value;
-        console.log("h = " + h, "m = " + m,"s = " + s);
+        h = $("#hrs").val();
+        m = $("#mins").val();
+        s = $("#secs").val();
         
         //carries entries over 60 min or secs
         if (s > 59) { s -= 60; m += 1;}
@@ -87,4 +86,4 @@ $(document).ready(function(){
     var h = m = s = 0;
     var time = timer = null;
       
-})
+});
